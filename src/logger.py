@@ -25,7 +25,7 @@ def plot_nazione():
         total.append(int(dic['totale_casi']))
 
     # Plot Data
-    plt.plot(total)
+    plt.plot(total, marker='o', markersize=4)
     plt.title('Casi Totali Italia')
     plt.grid(True)
     plt.show()
@@ -49,8 +49,8 @@ def plot_province():
     # Extracta data
     for provincia in province:
         data_provincia = search(provincia, data)
-        plt.plot(data_provincia, label = provincia)
-        print(data_provincia)
+        plt.plot(data_provincia, label=provincia, marker='o', markersize=4)
+        # print(data_provincia)
 
     # Plot data
     plt.legend()
